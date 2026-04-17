@@ -1,0 +1,120 @@
+.btn-agotados {
+  position: relative;
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 99px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+
+.btn-agotados__punto {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.panel-agotados {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: slideUp 0.25s ease;
+}
+
+.panel-agotados__header {
+  background: #dc2626;
+  color: white;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.panel-agotados__header h2 { margin: 0 0 0.2rem; font-size: 1.1rem; }
+.panel-agotados__header p { margin: 0; opacity: 0.85; font-size: 0.85rem; }
+
+.panel-agotados__header button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.panel-agotados__lista {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.agotado-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #fff9f9;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+}
+
+.agotado-item strong { display: block; font-size: 0.95rem; color: #111827; }
+.agotado-item span { font-size: 0.75rem; color: #6b7280; text-transform: capitalize; }
+
+.agotado-item__right { text-align: right; }
+.agotado-item__cantidad { display: block; font-size: 0.8rem; color: #dc2626; font-weight: 600; }
+.agotado-item__precio { font-size: 0.9rem; font-weight: 700; color: #111827; }
+
+.panel-agotados__footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.panel-agotados__total { font-size: 0.9rem; color: #6b7280; }
+.panel-agotados__total strong { display: block; font-size: 1.2rem; color: #dc2626; }
+
+.btn-pdf-agotados {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn-pdf-agotados:hover { background: #b91c1c; }

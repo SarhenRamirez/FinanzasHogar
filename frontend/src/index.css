@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-sidebar: #ffffff;
+  --bg-input: #f8fafc;
+  --border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --hover: #f1f5f9;
+  --toggle-bg: #f1f5f9;
+  --accent: #6366f1;
+  --accent-2: #06b6d4;
+}
+
+[data-tema="oscuro"] {
+  --bg: #0a0f1e;
+  --bg-card: #0f172a;
+  --bg-sidebar: #0f172a;
+  --bg-input: #0a0f1e;
+  --border: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --hover: #1e293b;
+  --toggle-bg: #1e293b;
+  --accent: #818cf8;
+  --accent-2: #22d3ee;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(99,102,241,0); }
+}
+
+button, input, select, textarea { transition: all 0.15s ease; }
+button:hover { opacity: 0.92; }
+input:focus, select:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+@media (max-width: 768px) {
+  aside { display: none !important; }
+  main {
+    margin-left: 0 !important;
+    padding: 1rem !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+  .mobile-header { display: flex !important; }
+  .bottom-nav { display: flex !important; }
+}
+
+@media (min-width: 769px) {
+  .mobile-header { display: none !important; }
+  .bottom-nav { display: none !important; }
+}
